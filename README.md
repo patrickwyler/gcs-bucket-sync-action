@@ -14,5 +14,5 @@ Sync a Github repository with a Google Cloud Storage bucket.
   with:
     secrets: ${{ secrets.google_service_account_credentials }}
     bucket: 'bucket_name'
-    exclude: '.*\.md$|.git$|.github$|.gitignore$'
+    exclude: '.*\.md$|.gitignore$|.git\/.*$|.github\/.*$'
 ```
