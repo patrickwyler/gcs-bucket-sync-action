@@ -9,7 +9,7 @@ Sync a Github repository with a Google Cloud Storage bucket.
 
 ```
 - name: Sync
-  uses: patrickwyler@main
+  uses: patrickwyler/gcs-bucket-sync-action@main
   with:
     secrets: ${{ secrets.google_service_account_credentials }}
     bucket: 'bucket_name'
