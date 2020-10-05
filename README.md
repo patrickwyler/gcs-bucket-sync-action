@@ -13,7 +13,7 @@ Sync a Github repository with a Google Cloud Storage bucket.
   uses: patrickwyler/gcs-bucket-sync-action@main
   with:
     secrets: ${{ secrets.google_service_account_credentials }}
-    bucket: 'patrickwyler.com'
+    bucket: 'bucket_name'
     exclude: |
       |
       .git
