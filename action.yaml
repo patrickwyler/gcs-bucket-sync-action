@@ -1,0 +1,16 @@
+name: GCS Bucket Sync Action
+description: Sync a repository with a GCS bucket
+
+inputs:
+  secrets:
+    description: Google credentials
+    required: true
+  bucket:
+    description: Bucket name
+    required: true
+
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: arrow-up
