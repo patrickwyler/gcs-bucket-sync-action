@@ -8,6 +8,10 @@ inputs:
   bucket:
     description: Bucket name
     required: true
+  exclude:
+    description: Regex for excluding files/dirs
+    required: false
+    default: '.git$'
 
 runs:
   using: docker
