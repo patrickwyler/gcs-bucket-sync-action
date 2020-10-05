@@ -8,6 +8,9 @@ inputs:
   bucket:
     description: Bucket name
     required: true
+  exclude:
+    description: List of excluded files/dirs
+    required: false
 
 runs:
   using: docker
