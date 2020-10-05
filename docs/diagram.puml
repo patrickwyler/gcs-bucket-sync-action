@@ -1,0 +1,35 @@
+@startuml
+skinparam rectangle {
+  borderColor d73a49
+  borderStyle dashed
+}
+
+cloud github as "Github" {
+  folder repo as "Repository" #white {
+    folder dir1 as ".git" #ffdce0
+    folder dir3 as ".github" #ffdce0
+    file file3 as "README.md" #ffdce0
+    file file4 as ".gitignore" #ffdce0
+
+    rectangle selection as " " {
+      folder dir2 as "images"
+      file file1 as "index.html"
+      file file2 as "error.html"
+    }
+  }
+
+  component action as "Github Action" #ffd33d
+}
+
+cloud gcp as "Google Cloud" {
+  folder bucket as "Bucket" #white {
+    folder bucketdir2 as "images"
+    file bucketfile1 as "index.html"
+    file bucketfile2 as "error.html"
+  }
+}
+
+
+selection <-- action : "get files/dirs \n(respect exclude \n param) \n"
+action --> bucket : "\n sync \n"
+@enduml
