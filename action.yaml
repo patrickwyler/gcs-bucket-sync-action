@@ -1,5 +1,6 @@
-name: GCS Bucket Sync Action
-description: Sync a repository with a GCS bucket
+name: Google Cloud Storage Bucket Sync (GCP,GCS)
+description: 'Sync a Github repository with a Google Cloud Storage (GCS) bucket'
+author: 'Patrick Wyler'
 
 inputs:
   secrets:
@@ -18,3 +19,4 @@ runs:
   image: Dockerfile
 branding:
   icon: arrow-up
+  color: gray-dark
