@@ -1,5 +1,5 @@
 # GCS Bucket Sync Action
-Sync a Github repository with a Google Cloud Storage bucket.
+This action helps by easily syncing a Github repository with a Google Cloud Storage bucket. It is very generic and can be used for different purposes. I used it for uploading my static website.
 
 ## Features
 - [X] Sync files/directories from your repository to your bucket
@@ -46,3 +46,6 @@ jobs:
 ## Diagram
 
 ![Diagram](http://www.plantuml.com/plantuml/png/TPB1JiCm38RlUGghNE3GmUWa149eOqoSk8mhbopnscXfKYMfs8JsxgInjcwZ71fPzcVd_-DEVU0kjBLcVgDCmnslmQ48t9GQuOS1hAoJwEPMMmVoeU2JnsFoC-mY9BclKB8zOqBRLaAfGjMkW7l8tbEOfJbhgsCBE6nigYrZu5MmRfV1rNUb0brt1ALoumIEui28hDTIuDq5KH11Lrv0IcCwY5akPcyVYr4j_w4cnqcgDDPXZoMkVnEFEiRAcjG0PEvSrNqggPgNw3EgzXUDgMWaRaTLgFKVWBhHEUjEW3thldW8MpVMe0d0IKR_q31B6P9U5ASx4GrnrdOUvbtoR2shLcmm9EOrXSDB8Mp88kcd-f3D0MZOwhvJpVfNVixpWzCdo4eCQOY_ZI8yV9bhXxw9AE1Mw5PYJ47wZMzYb37gX3n_ELYCGoBYTqOaO8f6jhN-1G00)
+
+### Tags
+GCP, Google Cloud Platform, GCS, Google Cloud Storage, Bucket, Sync, Syncing, Uploading, Upload
