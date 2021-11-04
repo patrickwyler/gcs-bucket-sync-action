@@ -6,5 +6,5 @@ rm /secrets.json
 
 # Sync files to bucket
 echo "Syncing bucket $BUCKET ..."
-gsutil -m rsync -r -c -d -x "$INPUT_EXCLUDE" /github/workspace gs://$INPUT_BUCKET/
+gsutil -m rsync -r -c -d -x "$INPUT_EXCLUDE" /github/workspace gs://$INPUT_BUCKET/dags
 echo "Done."
