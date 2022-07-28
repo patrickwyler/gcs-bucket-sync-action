@@ -9,6 +9,10 @@ inputs:
   bucket:
     description: Bucket name
     required: true
+  sync_dir:
+    description: Directory path to sync
+    required: false
+    default: ''
   exclude:
     description: Regex for excluding files/dirs
     required: false
