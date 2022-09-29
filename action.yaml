@@ -9,8 +9,12 @@ inputs:
   bucket:
     description: Bucket name
     required: true
-  sync_dir:
-    description: Directory path to sync
+  gcs_dir:
+    description: Directory path to sync to gcs
+    required: false
+    default: ''
+  github_dir:
+    description: Directory path to sync from github
     required: false
     default: ''
   exclude:
