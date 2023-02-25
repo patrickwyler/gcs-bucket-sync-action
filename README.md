@@ -11,7 +11,7 @@ This action helps by easily syncing a Github repository with a Google Cloud Stor
 - A service account with access to the bucket
 - The service account key _(json format)_
 
-_\*If you want to sync to an exiting bucket, make sure that your repository includes the whole content of it, otherwise you could lose data!_
+_\*If you want to sync to an existing bucket, make sure that your repository includes the whole content of it, otherwise you could lose data!_
 
 ## Inputs
 - `secrets` Your Google service account credentials as json. _**(Required)**_
