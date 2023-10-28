@@ -1,6 +1,6 @@
-name: 'Google Cloud Storage Bucket Sync (GCP,GCS)'
-description: 'Sync a Github repository with a Google Cloud Storage (GCS) bucket'
-author: 'Patrick Wyler'
+name: "Google Cloud Storage Bucket Sync (GCP,GCS)"
+description: "Sync a Github repository with a Google Cloud Storage (GCS) bucket"
+author: "Patrick Wyler"
 
 inputs:
   secrets:
@@ -9,14 +9,18 @@ inputs:
   bucket:
     description: Bucket name
     required: true
-  sync_dir:
-    description: Directory path to sync
+  sync_dir_from:
+    description: Repository Directory path to sync
     required: false
-    default: ''
+    default: ""
+  sync_dir_to:
+    description: Bucket Directory path to sync to
+    required: false
+    default: ""
   exclude:
     description: Regex for excluding files/dirs
     required: false
-    default: '.git$'
+    default: ".git$"
 
 runs:
   using: docker
