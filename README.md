@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Sync
-        uses: patrickwyler/gcs-bucket-sync-action@1.3
+        uses: patrickwyler/gcs-bucket-sync-action@1.4
         with:
           secrets: ${{ secrets.google_service_account_credentials }}
           bucket: 'patrickwyler.com'
