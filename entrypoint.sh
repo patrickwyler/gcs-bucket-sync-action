@@ -6,7 +6,7 @@ rm /secrets.json
 
 # Sync files to bucket
 echo "Syncing bucket $BUCKET ..."
-gsutil -m rsync -r -c -d -x "$INPUT_EXCLUDE" /github/workspace/$INPUT_SYNC_DIR_FROM gs://$INPUT_BUCKET/$INPUT_SYNC_DIR_TO
+gcloud storage rsync /github/workspace/$INPUT_SYNC_DIR_FROM gs://$INPUT_BUCKET/$INPUT_SYNC_DIR_TO --recursive --checksums-only --delete-unmatched-destination-objects --cache-control="$INPUT_CACHE_CONTROL" --exclude="$INPUT_EXCLUDE" $INPUT_ADDTL_TAGS
 if [ $? -ne 0 ]; then
     echo "Syncing failed"
     exit 1 
