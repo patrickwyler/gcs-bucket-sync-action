@@ -7,6 +7,7 @@ This action helps by easily syncing a Github repository with a Google Cloud Stor
 - [x] Sync files/directories from your repository to your bucket
 - [x] Delete files/directories from your bucket which where removed in your repository
 - [x] Exclude certain files from being synced with the bucket
+- [x] Include optional metadata tags for fine-grained control over file behaviors
 
 ## Requirements
 
@@ -22,7 +23,10 @@ _\*If you want to sync to an existing bucket, make sure that your repository inc
 - `bucket` Name of the target bucket. _**(Required)**_
 - `sync_dir_from` Repository directory path to sync, for example, `my_folder/to_sync`. It is empty by default.
 - `sync_dir_to` Bucket directory path to sync to, for example, `my_folder/to_sync`. It is empty by default.
-- `exclude` Regex for excluding files/dirs. ([gsutil rsync doc](https://cloud.google.com/storage/docs/gsutil/commands/rsync))
+- `exclude` Regex for excluding files/dirs.
+- `cache_control` cache control metadata tag, to control caching of content
+- `addtl_tags` any additional tags you want to include (see https://cloud.google.com/sdk/gcloud/reference/storage/rsync for docs and tag reference)
+  
 
 ## Example
 
@@ -47,6 +51,7 @@ jobs:
           secrets: ${{ secrets.google_service_account_credentials }}
           bucket: 'patrickwyler.com'
           exclude: '.*\.md$|\.gitignore$|\.git/.*$|\.github/.*$'
+          cache_control: 'no-cache'
 
 ```
 
