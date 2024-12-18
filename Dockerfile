@@ -1,3 +1,3 @@
-FROM google/cloud-sdk:502.0.0-alpine
+FROM google/cloud-sdk:alpine
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
