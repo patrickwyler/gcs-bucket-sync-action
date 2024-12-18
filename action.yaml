@@ -21,6 +21,14 @@ inputs:
     description: Regex for excluding files/dirs
     required: false
     default: ".git$"
+  cache_control:
+    description: Cache-Control header value
+    required: false
+    default: ""
+  addtl_tags:
+    description: Additional tags to add to the sync
+    required: false
+    default: ""
 
 runs:
   using: docker
